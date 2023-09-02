@@ -17,10 +17,7 @@ public class TwoSum {
         int[] result = new int[2];
 
         for(int i = 0; i < nums.length; i++) {
-            if (target == nums[i] && numbers.containsKey(0)) {
-                result[0] = i;
-                result[1] = numbers.get(0);
-            } else if (numbers.containsKey(target - nums[i])) {
+            if (numbers.containsKey(target - nums[i])) {
                 result[0] = i;
                 result[1] = numbers.get(target - nums[i]);
             }
