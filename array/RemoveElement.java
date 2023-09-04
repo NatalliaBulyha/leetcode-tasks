@@ -30,7 +30,10 @@ public class RemoveElement {
         int[] nums = {3,2,2,3};
         int val = 3;
 
-        int[] result = removeElement(nums, val);
+        int[] nums2 = {0,1,2,2,3,0,4,2};
+        int val2 = 2;
+
+        int[] result = removeElement(nums2, val2);
         for (int num : result) {
             System.out.println(num);
         }
@@ -43,10 +46,12 @@ public class RemoveElement {
         for (int i = 0; i < nums.length; i++) {
 
             if (nums[i] != val) {
-                nums[i] = nums[currentlyIndex];
+                nums[currentlyIndex] = nums[i];
                 currentlyIndex++;
             }
         }
+
+        System.out.println("count " + currentlyIndex);
         return nums;
     }
 }
