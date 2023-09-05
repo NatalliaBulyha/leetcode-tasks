@@ -45,4 +45,25 @@ public class SearchInsertPosition {
         }
         return index;
     }
+
+    public static int searchInsert2(int[] nums, int target) {
+        int index = Math.round(nums.length / 2);
+
+        if (nums[index] == target) {
+            return index;
+        }
+
+
+        else if (index == 0 && target < nums[index]) {
+            return index;
+        } else if (index != 0 && target < nums[index]) {
+            return index;
+        } else if(index == nums.length - 1 && target > nums[index]) {
+            return index + 1;
+        } 
+
+        return index;
+    }
+
+
 }
